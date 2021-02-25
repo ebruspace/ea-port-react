@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  overflow-x: hidden;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  color: rgb(126, 126, 126);
+  margin: 20px;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100vh;
+  width: 60px;
+  background-color: #000;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#menu ul {
+  list-style: none;
+}
+
+.menu-item-hide {
+  display: none;
+}
+
+.menu-item-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #d41935;
+}
+
+.opening-overlay {
+  background-image: linear-gradient(to bottom, #7e1921ee, #d41935ef),
+    url(../img/Storyboard/Storyboard-11.jpg);
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+
+.logo {
+  position: fixed;
+  top: 40px;
+  left: 110px;
+  font-size: 25px;
+}
+
+.logo-wb {
+  color: white;
+}
+
+.logo-wb span {
+  color: black;
+}
+
+.logo-rb span {
+  color: black;
+}
+
+.title {
+  padding: 50px;
+  padding-left: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.opening-overlay h1 {
+  font-size: 70px;
+}
+
+.break {
+  height: 5px;
+  width: 70px;
+  margin: 20px 0;
+  background-color: #000;
+}
+
+.opening-overlay p {
+  color: white;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.top-nav {
+  height: 135px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.logo-rb {
+  color: #d41935;
+}
+
+.pn {
+  font-size: 12px;
+}
+
+.portfolio {
+  opacity: 1;
+}
+
+.portfolio-menu {
+  text-align: right;
+  margin: 40px;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.portfolio-menu ul {
+  list-style: none;
+}
+
+.portfolio-menu-item {
+  text-decoration: none;
+}
+.portfolio-section {
+  position: relative;
+  width: 100%;
+  padding-left: 60px;
+  grid-template-columns: repeat(4, calc((100vw - 60px) / 4));
+  grid-template-rows: repeat(4, calc((100vh - 135px) / 2));
+  z-index: -1;
+  transition: all 0.4s ease-in-out;
+}
+
+#animations {
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 135px;
+  padding-left: 60px;
+}
+
+#stills {
+  padding-top: 135px;
+}
+
+#stills,
+#animations {
+  display: grid;
+}
+
+.still {
+  height: calc((100vh - 135px) / 2);
+  width: calc((100vw - 60px) / 4);
+  background-position: center;
+  background-size: cover;
+}
+
+.img-sq {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.2s ease;
+  background-image: linear-gradient(#000, #000);
+}
+
+.img-sq:hover {
+  opacity: 0.3;
+}
+
+.content {
+  position: absolute;
+  top: 135px;
+  left: 60px;
+}
+
+.slider {
+  /* display: flex; */
+  background-color: #000;
+  height: 410px;
+}
+
+.sb-slide {
+  width: calc(100vw - 60px);
+  transform: rotate(0);
+  transform-origin: top left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+  position: absolute;
+}
+
+.sb-slide img {
+  width: calc((100vw - 60px) / 1.3);
+  height: 100%;
+}
+
+.sb-desc {
+  padding: 30px;
+}
+
+.img-about {
+  width: 600px;
+  position: fixed;
+  top: 135px;
+  left: 60px;
+}
+
+.about-cv {
+  padding-left: 660px;
+  padding-top: 135px;
+  display: grid;
+  grid-template-columns: 100px 600px;
+  gap: 10px;
+}
+
+.cv-date,
+.entry-details {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.cv-date {
+  text-align: right;
+}
+
+.cv-date p {
+  padding-right: 15px;
+}
+
+.entry-title {
+  font-size: 16px;
+}
+
+.cv-date-1,
+.cv-entry-1,
+.cv-date-4,
+.cv-entry-4,
+.cv-date-12,
+.cv-entry-12 {
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.certificates {
+  padding-left: 660px;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cert {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid black;
+}
